@@ -1,0 +1,102 @@
+/*(Find the number of days in a month) Write a program that prompts the user to
+enter the month and year and displays the number of days in the month. For example, if the user entered month 2 and year 2012, the program should display
+that February 2012 had 29 days. If the user entered month 3 and year 2015, the
+program should display that March 2015 had 31 days.*/
+
+package System.out;
+import java.util.Scanner;
+
+public class chap_3_11 {
+	
+	public static void main ( String [] args ){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Please enter the Year" + 
+		"\n For example: 2012  ");
+		int Year = input.nextInt();
+		
+		System.out.println("Please enter the Month "+ 
+		"\n For example: 2 ");
+		int Months = input.nextInt();
+		
+		int day=0;
+		
+		if ( Months==2 && (Year%4)==0 ){
+			 day=29;
+			 System.out.println( "That Feb " + Year + " had" + day);
+			 }
+		
+		else if ( Months==2 && (Year%4)!=0 ){
+				day=28;
+				System.out.println( "That Feb " + Year + " had " + day);
+			 }
+		
+		else if ( Months==1 ) {
+				day=31;
+				String mon="January";
+				System.out.println( "That " + mon + " " + Year + " had " + day);
+			 }
+		
+		else if ( Months==3 ) {
+			day=31;
+			String mon="March";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==5 ) {
+			day=31;
+			String mon="April";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==7 ) {
+			day=31;
+			String mon="May";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==9 ) {
+			day=31;
+			String mon="September";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==11 ) {
+			day=31;
+			String mon="November";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==4) {
+			day=30;
+			String mon="April";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==6 ) {
+			day=30;
+			String mon="June";
+			System.out.println( "That" + mon + " " + Year + " had " + day);
+		 }
+		
+		else if ( Months==8 ) {
+			day=30;
+			String mon="August";
+			System.out.println( "That" + mon + " " + Year + " had " + day);
+		 }
+	
+		else if ( Months==10 ) {
+			day=30;
+			String mon="August";
+			System.out.println( "That " + mon + " " + Year + " had " + day);
+		 }
+		
+		else { day=30;
+			 String mon="December";
+			 System.out.println( "That " + mon + " " + Year + " had " + day);
+			 }
+			
+	}
+
+}
