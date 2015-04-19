@@ -1,0 +1,38 @@
+/*(Compute the perimeter of a triangle) Write a program that reads three edges for a
+triangle and computes the perimeter if the input is valid. Otherwise, display that
+the input is invalid. The input is valid if the sum of every pair of two edges is
+greater than the remaining edge.*/
+
+package System.out;
+import java.util.Scanner;
+
+public class chap3_19 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.print("Please enter the value of triangle sides " + 
+		"\n For example 3 4 5 ");
+		
+		Double A = input.nextDouble();
+		Double B = input.nextDouble();
+		Double C = input.nextDouble();
+		
+		double AB = A + B;
+		double AC = A + C;
+		double BC = B + C;
+		
+		if (  AB  <= C   
+		  ||  AC  <= B   
+		  ||  BC  <= A  ){
+			
+		 System.out.print(" It's not a valid triangle ");}
+		
+		else {
+			double ans= A+B+C;
+			System.out.println(" The triangle perimeter is " + ans );}
+		
+	}
+	
+}
