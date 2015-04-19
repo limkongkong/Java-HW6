@@ -1,0 +1,33 @@
+
+package System.out;
+
+import java.util.Scanner;
+
+public class chap3_22 {
+	
+	public static void main (String[] args){
+		
+		Scanner input= new Scanner (System.in);
+		System.out.println("The circle is with 10 radius ");
+		System.out.println("Enter x1  ");
+		double x1 = input.nextDouble();
+		System.out.println("Enter y1  ");
+		double y1 = input.nextDouble();
+	
+		final double x2=0;
+		final double y2=0;
+	
+		double A=(x2-x1);
+		double B= (y2-y1);
+		double C= Math.pow(A,2) + Math.pow(B,2);
+		double Ans = Math.pow(C,0.5);
+		
+		if (Ans <= 10){
+			System.out.println(" The points are in the circle  " + Ans);}
+	
+		if (Ans >= 10){
+			System.out.println(" The points are not in the circle  " + Ans);}
+
+	}
+	
+}
