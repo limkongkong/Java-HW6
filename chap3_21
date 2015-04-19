@@ -1,0 +1,52 @@
+
+
+
+package System.out;
+import java.util.Scanner;
+
+public class chap3_21 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter year: (e.g., 2012): ");
+		int Year = input.nextInt();
+		
+		System.out.println("Enter month: 1-12: ");
+		int m = input.nextInt();
+		
+		System.out.println("Enter the day of the month: 1-31: ");
+		int q = input.nextInt();
+		
+		int k = Year%100;
+		int j = Year/100;
+		
+		String[] Months;
+		Months = new String[7];
+		
+		Months[0]="Saturday";
+		Months[1]="Sunday";
+		Months[2]="Monday";
+		Months[3]="Tuesday";
+		Months[4]="Wednesday";
+		Months[5]="Thursday";
+		Months[6]="Friday";
+		
+		if ( m == 1
+		  || m == 2	) {
+			
+			int mon = m + 12;
+			int kon = ( Year - 1 ) %100;
+			int jon = ( Year - 1 )/100;
+			
+			int h = ( q + 26*( mon + 1 )/10 + kon + kon /4 + jon/ 4 + 5*jon ) % 7;
+			System.out.println("day is: " + Months[h] );}
+		
+		else {
+		int h = ( q + 26*(m + 1)/10 + k + k /4 + j/ 4 + 5*j ) % 7;
+		System.out.println("day is: " + Months[h]);}
+		
+	}
+	
+}
