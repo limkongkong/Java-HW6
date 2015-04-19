@@ -1,0 +1,28 @@
+
+
+package System.out;
+import java.util.Scanner;
+
+public class chap3_23 {
+	
+	public static void main (String[] args){
+		
+		Scanner input= new Scanner (System.in);
+		System.out.println("The recantangle is located at center with 10 width and 5 height ");
+		System.out.println("Enter x1  ");
+		double x1 = input.nextDouble();
+		System.out.println("Enter y1  ");
+		double y1 = input.nextDouble();
+		
+		if ( x1 > 5
+		  || -5 > x1 
+		  || y1 > 2.5 
+		  || -2.5 > y1){
+		 System.out.println(" The points are not in the rectangle  ");}
+		
+		else {
+		System.out.println(" The points are in the rectangle  ");}
+		
+		}
+	
+}
