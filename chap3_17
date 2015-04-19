@@ -1,0 +1,60 @@
+/*(Game: scissor, rock, paper) Write a program that plays the popular scissor-rockpaper
+game. (A scissor can cut a paper, a rock can knock a scissor, and a paper can
+wrap a rock.) The program randomly generates a number 0, 1, or 2 representing
+scissor, rock, and paper. The program prompts the user to enter a number 0, 1, or
+2 and displays a message indicating whether the user or the computer wins, loses,
+or draws. Here are sample runs:*/
+
+
+package System.out;
+import java.util.Scanner;
+import java.util.Random;
+
+public class chap3_17 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner (System.in);
+		Random randomGenerator = new Random();
+		
+		int randomInt = randomGenerator.nextInt(3);
+		
+		System.out.print("scissor (0), rock (1), paper (2): ");
+		int Game = input.nextInt();
+		
+		if ( randomInt == Game ){
+			System.out.print("The computer is paper. You are paper too. It is a draw ");
+		}
+		
+		else if ( randomInt == 0 && Game == 1 ){
+			System.out.print("The computer is Scissor. You are rock. You win ");
+		}
+		
+		else if ( randomInt == 0 && Game == 2 ){
+			System.out.print("The computer is Scissor. You are paper. You lose ");
+		}
+		
+		else if ( randomInt == 1 && Game == 2 ){
+			System.out.print("The computer is rock. You are paper. You win ");
+		}
+		
+		else if ( randomInt == 1 && Game == 0 ){
+			System.out.print("The computer is rock. You are Scissor. You lose ");
+		}
+		
+		else if ( randomInt == 2 && Game == 0 ){
+			System.out.print("The computer is paper. You are Scissor. You win ");
+		}
+		
+		else if ( randomInt == 2 && Game == 1){
+			System.out.print("The computer is paper. You are rock. You lose ");
+		}
+		
+		else{
+			System.out.print("Program Error ");
+		}
+	
+		
+	}
+
+}
